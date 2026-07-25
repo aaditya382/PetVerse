@@ -1,0 +1,39 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PetVerse</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar">
+
+    <div class="logo">
+        🐾 PetVerse
+    </div>
+
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/shop/">Shop</a></li>
+        <a href="/appointments/">Appointments</a>
+        <li><a href="/contact/">Contact</a></li>
+        <a href="/login/">Login</a>
+    </ul>
+
+</nav>
+
+
+<!-- Page Content -->
+{% block content %}
+
+{% endblock %}
+
+
+</body>
+</html>

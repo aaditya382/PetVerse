@@ -1,0 +1,308 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4fff4;
+}
+
+.hero{
+    background:linear-gradient(135deg,#2E7D32,#4CAF50);
+    color:white;
+    text-align:center;
+    padding:70px 20px;
+}
+
+.hero h1{
+    font-size:45px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+.main-container{
+    width:90%;
+    max-width:1200px;
+    margin:50px auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.info-box{
+    background:white;
+    border-radius:20px;
+    padding:35px;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+}
+
+.info-box h2{
+    color:#2E7D32;
+    margin-bottom:20px;
+}
+
+.feature{
+    display:flex;
+    align-items:center;
+    margin:20px 0;
+}
+
+.icon{
+    font-size:35px;
+    margin-right:15px;
+}
+
+.form-box{
+    background:white;
+    border-radius:20px;
+    padding:35px;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+}
+
+.form-box h2{
+    color:#2E7D32;
+    text-align:center;
+    margin-bottom:25px;
+}
+
+label{
+    font-weight:bold;
+    color:#444;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:13px;
+    margin-top:8px;
+    margin-bottom:20px;
+    border:2px solid #ddd;
+    border-radius:10px;
+    font-size:15px;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    border-color:#4CAF50;
+    outline:none;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    background:#4CAF50;
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#2E7D32;
+}
+
+.doctors{
+    width:90%;
+    max-width:1200px;
+    margin:40px auto;
+}
+
+.doctors h2{
+    text-align:center;
+    color:#2E7D32;
+    margin-bottom:30px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    text-align:center;
+    border-radius:18px;
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:15px;
+}
+
+.card h3{
+    color:#2E7D32;
+}
+
+.card p{
+    color:#666;
+    margin:8px 0;
+}
+
+footer{
+    margin-top:60px;
+    background:#2E7D32;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+@media(max-width:900px){
+    .main-container{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+
+<div class="hero">
+    <h1>🏥 Veterinary Appointment</h1>
+    <p>Book an appointment with experienced veterinarians for your beloved pet.</p>
+</div>
+
+<div class="main-container">
+
+    <div class="info-box">
+
+        <h2>🐾 Why Choose PetVerse?</h2>
+
+        <div class="feature">
+            <div class="icon">👨‍⚕️</div>
+            <div>
+                <h3>Experienced Doctors</h3>
+                <p>Certified veterinarians with years of experience.</p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <div class="icon">🩺</div>
+            <div>
+                <h3>Complete Health Checkup</h3>
+                <p>Regular health examinations and treatments.</p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <div class="icon">💉</div>
+            <div>
+                <h3>Vaccinations</h3>
+                <p>Keep your pets protected with timely vaccinations.</p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <div class="icon">🚑</div>
+            <div>
+                <h3>Emergency Support</h3>
+                <p>Fast emergency consultation for urgent cases.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="form-box">
+
+        <h2>📅 Book Appointment</h2>
+
+        <form>
+
+            <label>Owner Name</label>
+            <input type="text" placeholder="Enter your full name">
+
+            <label>Pet Name</label>
+            <input type="text" placeholder="Enter pet name">
+
+            <label>Pet Type</label>
+            <select>
+                <option>Dog 🐶</option>
+                <option>Cat 🐱</option>
+                <option>Bird 🦜</option>
+                <option>Rabbit 🐰</option>
+                <option>Fish 🐠</option>
+                <option>Other</option>
+            </select>
+
+            <label>Doctor</label>
+            <select>
+                <option>Dr. Sharma</option>
+                <option>Dr. Patel</option>
+                <option>Dr. Mehta</option>
+            </select>
+
+            <label>Appointment Date</label>
+            <input type="date">
+
+            <label>Preferred Time</label>
+            <input type="time">
+
+            <label>Describe Your Pet's Problem</label>
+            <textarea rows="4" placeholder="Write symptoms or health concerns..."></textarea>
+
+            <button type="submit">🐾 Confirm Appointment</button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<div class="doctors">
+
+    <h2>👨‍⚕️ Meet Our Veterinarians</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <img src="https://via.placeholder.com/120" alt="Doctor">
+            <h3>Dr. Sharma</h3>
+            <p>General Veterinary</p>
+            <p>⭐ 4.9 (350 Reviews)</p>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/120" alt="Doctor">
+            <h3>Dr. Patel</h3>
+            <p>Pet Surgeon</p>
+            <p>⭐ 4.8 (280 Reviews)</p>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/120" alt="Doctor">
+            <h3>Dr. Mehta</h3>
+            <p>Pet Nutrition Specialist</p>
+            <p>⭐ 4.9 (410 Reviews)</p>
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    <h3>🐾 PetVerse Veterinary Care</h3>
+    <p>Your Pet's Health is Our Priority ❤️</p>
+</footer>
+
+{% endblock %}

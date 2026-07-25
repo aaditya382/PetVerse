@@ -1,0 +1,246 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+
+body{
+    background:#f5fff5;
+}
+
+.hero{
+    background:linear-gradient(135deg,#2E7D32,#81C784);
+    color:white;
+    text-align:center;
+    padding:70px 20px;
+    border-radius:20px;
+    margin:20px;
+}
+
+.hero h1{
+    font-size:45px;
+}
+
+.hero p{
+    font-size:20px;
+    margin-top:15px;
+}
+
+
+.adoption-container{
+    width:90%;
+    margin:40px auto;
+}
+
+
+.pet-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+
+.pet-card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+
+.pet-card:hover{
+    transform:translateY(-10px);
+}
+
+
+.pet-image{
+    height:200px;
+    background:#e8f5e9;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:90px;
+}
+
+
+.pet-card h2{
+    color:#2E7D32;
+    margin:20px 0 10px;
+}
+
+
+.info{
+    color:#555;
+    font-size:16px;
+    line-height:1.8;
+}
+
+
+.adopt-btn{
+    background:#4CAF50;
+    color:white;
+    border:none;
+    padding:13px 35px;
+    border-radius:30px;
+    font-size:17px;
+    margin:20px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+
+.adopt-btn:hover{
+    background:#2E7D32;
+}
+
+
+.title{
+    text-align:center;
+    color:#2E7D32;
+    margin:40px;
+    font-size:35px;
+}
+
+
+.footer-box{
+    background:#2E7D32;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:50px;
+}
+
+</style>
+
+
+<div class="hero">
+
+    <h1>🏠 Pet Adoption Center</h1>
+
+    <p>
+        Give a loving home to a pet waiting for a family ❤️
+    </p>
+
+</div>
+
+
+<h2 class="title">🐾 Available Pets For Adoption</h2>
+
+
+<div class="adoption-container">
+
+<div class="pet-grid">
+
+
+    <div class="pet-card">
+
+        <div class="pet-image">
+            🐶
+        </div>
+
+        <h2>Bruno</h2>
+
+        <div class="info">
+            Breed: Labrador<br>
+            Age: 2 Years<br>
+            Gender: Male<br>
+            Health: Healthy ✅
+        </div>
+
+        <button class="adopt-btn">
+            🏠 Adopt Now
+        </button>
+
+    </div>
+
+
+
+    <div class="pet-card">
+
+        <div class="pet-image">
+            🐱
+        </div>
+
+        <h2>Bella</h2>
+
+        <div class="info">
+            Breed: Persian Cat<br>
+            Age: 1 Year<br>
+            Gender: Female<br>
+            Health: Vaccinated ✅
+        </div>
+
+        <button class="adopt-btn">
+            🏠 Adopt Now
+        </button>
+
+    </div>
+
+
+
+
+    <div class="pet-card">
+
+        <div class="pet-image">
+            🦜
+        </div>
+
+        <h2>Coco</h2>
+
+        <div class="info">
+            Breed: Parrot<br>
+            Age: 8 Months<br>
+            Gender: Male<br>
+            Health: Active ✅
+        </div>
+
+        <button class="adopt-btn">
+            🏠 Adopt Now
+        </button>
+
+    </div>
+
+
+
+
+    <div class="pet-card">
+
+        <div class="pet-image">
+            🐰
+        </div>
+
+        <h2>Snowy</h2>
+
+        <div class="info">
+            Breed: Rabbit<br>
+            Age: 6 Months<br>
+            Gender: Female<br>
+            Health: Healthy ✅
+        </div>
+
+        <button class="adopt-btn">
+            🏠 Adopt Now
+        </button>
+
+    </div>
+
+
+</div>
+
+</div>
+
+
+<div class="footer-box">
+
+<h3>❤️ Adopt Don't Shop</h3>
+
+<p>
+Every pet deserves love, care, and a happy home.
+</p>
+
+</div>
+
+
+{% endblock %}
